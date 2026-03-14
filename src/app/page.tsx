@@ -17,8 +17,8 @@ const OWNER_COLORS = {
   "E1+E4": "#ede9fe", "E1+E2": "#fff1f2", "E1+Stakeholder": "#f0fdf4",
 };
 
-const ownerColor = (o : string) => {
-  for (const k of Object.keys(OWNER_COLORS)) if (o?.startsWith(k)) return OWNER_COLORS[k];
+const ownerColor = (o: string) => {
+  for (const k of Object.keys(OWNER_COLORS)) if (o?.startsWith(k)) return OWNER_COLORS[k as keyof typeof OWNER_COLORS];
   return "#f8fafc";
 };
 
