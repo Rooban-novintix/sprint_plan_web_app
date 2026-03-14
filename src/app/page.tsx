@@ -242,7 +242,7 @@ export default function App() {
           </div>
         </div>
         <div style={{ display:"flex", gap:12, marginTop:10 }}>
-          {[["Done",stats.done,"#4ade80"],["In Progress",stats.inProgress,"#60a5fa"],["Blocked",stats.blocked,"#f87171"],["Not Started",stats.notStarted,"#94a3b8"]].map(([l,v,c]) => (
+          {([["Done",stats.done,"#4ade80"],["In Progress",stats.inProgress,"#60a5fa"],["Blocked",stats.blocked,"#f87171"],["Not Started",stats.notStarted,"#94a3b8"]] as [string,number,string][]).map(([l,v,c]) => (
             <div key={l} style={{ background:"rgba(255,255,255,0.1)", borderRadius:6, padding:"4px 10px", fontSize:12 }}>
               <span style={{ color:c, fontWeight:700 }}>{v}</span> <span style={{ opacity:0.8 }}>{l}</span>
             </div>
