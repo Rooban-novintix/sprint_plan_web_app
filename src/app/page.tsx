@@ -288,7 +288,7 @@ export default function App() {
               <div style={{ background:w.color, color:"white", padding:"8px 14px", borderRadius:"8px 8px 0 0", fontWeight:700, fontSize:14 }}>
                 Week {w.week} — {w.label.split("—")[1]}
               </div>
-              {Object.entries(dayGroups).map(([day, dayTasks]) => {
+              {Object.entries(dayGroups).map(([day, dayTasks]: [string, any[]]) => {
                 const dl = weeks.flatMap(x=>x.days).find(d=>`Day ${d.day}`===day);
                 return (
                   <div key={day} style={{ marginBottom:2 }}>
